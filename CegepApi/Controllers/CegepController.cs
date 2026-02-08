@@ -12,7 +12,8 @@ namespace CegepApi.Controllers
         ///  fonction qui obtien la liste des cegeps
         /// </summary>
         /// <returns>la liste des cegeps</returns>
-        [HttpGet("ObtenirListeCegeps")]
+        [Route("ObtenirListeCegeps")]
+        [HttpGet]
         public IActionResult ObtenirListeCegeps()
         {
             try
@@ -30,7 +31,8 @@ namespace CegepApi.Controllers
         /// </summary>
         /// <param name="nomCegep">le nom du cegep voulu</param>
         /// <returns>le cegep</returns>
-        [HttpGet("ObtenirCegep")]
+        [Route("ObtenirCegep")]
+        [HttpGet]
         public CegepDTO ObtenirCegep(string nomCegep)
         {
             return CegepControleur.Instance.ObtenirCegep(nomCegep);
@@ -40,7 +42,8 @@ namespace CegepApi.Controllers
         /// </summary>
         /// <param name="cegep"></param>
         /// <returns></returns>
-        [HttpPost("AjouterCegep")]
+        [Route("AjouterCegep")]
+        [HttpPost]
         public IActionResult AjouterCegep([FromBody] CegepDTO cegep)
         {
             try
@@ -58,7 +61,8 @@ namespace CegepApi.Controllers
         /// </summary>
         /// <param name="cegep">nom du cegep a modifier</param>
         /// <returns></returns>
-        [HttpPut("ModifierCegep")]
+        [Route("ModifierCegep")]
+        [HttpPut]
         public IActionResult ModifierCegep([FromBody] CegepDTO cegep)
         {
             try
@@ -76,7 +80,8 @@ namespace CegepApi.Controllers
         /// </summary>
         /// <param name="nomCegep">le nom du cegep</param>
         /// <returns></returns>
-        [HttpDelete("SupprimerCegep")]
+        [Route("SupprimerCegep")]
+        [HttpDelete]
         public IActionResult SupprimerCegep(string nomCegep)
         {
             try
@@ -93,7 +98,8 @@ namespace CegepApi.Controllers
         /// supprime la liste des cegeps
         /// </summary>
         /// <returns></returns>
-        [HttpDelete("ViderListeCegeps")]
+        [Route("ViderListeCegeps")]
+        [HttpDelete]
         public IActionResult ViderListeCegeps()
         {
             try
