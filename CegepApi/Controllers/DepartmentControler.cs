@@ -78,7 +78,7 @@ namespace CegepApi.Controllers
         /// <returns></returns>
         [Route("ModifierDepartement")]
             [HttpPut]
-            public IActionResult ModifierCegep(string nomCegep, [FromBody] DepartementDTO departement)
+            public IActionResult ModifierDepartement(string nomCegep, [FromBody] DepartementDTO departement)
         {
                 try
                 {
